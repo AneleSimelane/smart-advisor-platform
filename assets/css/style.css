@@ -1,0 +1,202 @@
+/* Custom CSS for Smart Advisor Eswatini - Modern UI with Photo Backgrounds & Glassmorphism */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-green: #10b981;
+    --primary-dark: #065f46;
+    --accent-emerald: #059669;
+    --accent-gold: #f59e0b;
+    --glass-bg: rgba(255, 255, 255, 0.92);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --dark-sidebar: rgba(15, 30, 22, 0.92);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 66px;
+    background: linear-gradient(rgba(10, 25, 16, 0.72), rgba(10, 25, 16, 0.82)), 
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80') center center / cover fixed no-repeat;
+    color: #1e293b;
+}
+
+.main-wrapper {
+    flex: 1;
+}
+
+/* Fixed Glass Navbar */
+.navbar {
+    background: linear-gradient(135deg, rgba(6, 95, 70, 0.95), rgba(4, 47, 34, 0.98)) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 1.25rem;
+}
+
+.navbar-brand i {
+    color: #34d399;
+    filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.6));
+}
+
+/* Glassmorphism Cards */
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.22);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 700;
+    padding: 1.2rem 1.5rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background: var(--dark-sidebar);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: calc(100vh - 66px);
+    padding: 1.5rem 0;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 24px;
+    margin: 4px 12px;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.sidebar .nav-link i {
+    width: 28px;
+    font-size: 1.1rem;
+}
+
+.sidebar .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.dashboard-wrapper {
+    display: flex;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* Stat Cards */
+.stat-card {
+    border-left: 5px solid #10b981 !important;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.stat-icon {
+    font-size: 2.75rem;
+    color: #10b981;
+    opacity: 0.85;
+}
+
+/* Map Containers & Controls */
+.map-container {
+    height: 420px;
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.plant-doctor-preview {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    display: none;
+}
+
+/* Landing Page Hero Banner */
+.hero-glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1.25rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border-radius: 0.6rem;
+    border: 1px solid #cbd5e1;
+    padding: 0.65rem 0.9rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}
+
+/* Footer Styling */
+footer {
+    background: rgba(10, 22, 15, 0.95) !important;
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .dashboard-content {
+        padding: 1rem;
+    }
+}

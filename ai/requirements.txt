@@ -1,0 +1,7 @@
+# Plant Doctor AI Service - Requirements
+flask
+flask-cors
+tensorflow
+Pillow
+numpy
+werkzeug

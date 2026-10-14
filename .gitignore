@@ -1,0 +1,26 @@
+# Python & Virtualenv
+ai/venv/
+ai/__pycache__/
+*.py[cod]
+*$py.class
+*.model
+*.h5
+
+# PHP & Composer
+vendor/
+composer.phar
+
+# Environment & Credentials
+.env
+.env.local
+
+# Logs and Uploads
+uploads/*
+!uploads/.gitkeep
+*.log
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
